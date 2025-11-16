@@ -1,14 +1,15 @@
 # IT-Networking-Office-LAN
 
 This project demonstrates a complete network topology setup using:
-- **4 Router**
+- **3 Router**
+- **1 Firewall**
 - **5 Switches**
 - **1 Cloud**
 - **1 Modem**
-- **6 Servers**
+- **4 Servers**
 - **End Devices**
 
-The use Configuration use was **Dynamic Host Configuration Protocol (DHCP)**, **Virtual Local Area Network(VLAN)**, **Link Aggregation Control Protocol(LACP)** ,**Telephony (VoIP)**, **Open Shortest Path First(OSPF)** , **Hot STanbdy Routing Protocol(HSRP)**,and **Spanning Tree Protocol(STP)**, **File Transfer Protocol(FTP), **Hypertext Transfer Protocol Secure(HTTPS)**, **Simple Mail Transfer Protocol(SMTP)**, **Post Office Protocol(POP)**,"Port Address Translation(PAT)**, **Access List**, **Secret Shell(SSH)**, **Network Time Protocol(NTP)**, and **Domain Name System(DNS)**. Designed and simulated using **Cisco Packet Tracer**, this setup is ideal for Implementing the past projects in real life topology or infrastructure.
+The use Configuration use was **Dynamic Host Configuration Protocol (DHCP)**, **Virtual Local Area Network(VLAN)**, **Open Shortest Path First(OSPF)** , **Hot STanbdy Routing Protocol(HSRP)**,and **Spanning Tree Protocol(STP)**, **File Transfer Protocol(FTP), **Hypertext Transfer Protocol Secure(HTTPS)**, **Simple Mail Transfer Protocol(SMTP)**, **Post Office Protocol(POP)**,"Port Address Translation(PAT)**, **Access List**, **Secret Shell(SSH)**, **Network Time Protocol(NTP)**, and **Domain Name System(DNS)**. Designed and simulated using **Cisco Packet Tracer**, this setup is ideal for Implementing the past projects in real life topology or infrastructure.
 
 ---
 
