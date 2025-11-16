@@ -9,26 +9,22 @@ This project demonstrates a complete network topology setup using:
 - **4 Servers**
 - **End Devices**
 
-The use Configuration use was **Dynamic Host Configuration Protocol (DHCP)**, **Virtual Local Area Network(VLAN)**, **Open Shortest Path First(OSPF)** , **Hot STanbdy Routing Protocol(HSRP)**,and **Spanning Tree Protocol(STP)**, **File Transfer Protocol(FTP), **Hypertext Transfer Protocol Secure(HTTPS)**, **Simple Mail Transfer Protocol(SMTP)**, **Post Office Protocol(POP)**,"Port Address Translation(PAT)**, **Access List**, **Secret Shell(SSH)**, **Network Time Protocol(NTP)**, and **Domain Name System(DNS)**. Designed and simulated using **Cisco Packet Tracer**, this setup is ideal for Implementing the past projects in real life topology or infrastructure.
+The use Configuration use was **Dynamic Host Configuration Protocol (DHCP)**, **Virtual Local Area Network(VLAN)**, **Open Shortest Path First(OSPF)** , **Hot STanbdy Routing Protocol(HSRP)**,and **Spanning Tree Protocol(STP)**, **File Transfer Protocol(FTP), **Hypertext Transfer Protocol Secure(HTTPS)**, **Simple Mail Transfer Protocol(SMTP)**, **Post Office Protocol(POP)**,"Port Address Translation(PAT)**, **Access List**, **Secret Shell(SSH)**, and **Domain Name System(DNS)**. Designed and simulated using **Cisco Packet Tracer**, this setup is ideal for Implementing the past projects in real life topology or infrastructure.
 
 ---
 
 ## Project Objectives
-- Design and Implement an Enterprise Network Topology to develop a complete and scalable network infrastructure integrating routers, switches, servers, and end devices that emulate a real-world enterprise environment.
-- Implement Dynamic IP Addressing using DHCP to automate IP address assignment across all network segments except for Server VLAN, minimizing manual configuration and IP conflicts.
-- Segment Network using VLANs To separate departments (Front Desk, Management, Server Room, CEO Office, etc.) into logical networks, improving security, manageability, and performance.
-- Ensure Redundancy and Load Balancing with HSRP and LACP to maintain continuous network availability and optimize link utilization through Hot Standby Router Protocol (HSRP) and Link Aggregation Control Protocol (LACP).
+- Design and Implement an Enterprise Network Topology to develop a complete and scalable network infrastructure integrating routers, switches, firewall, servers, and end devices that emulate a real-world enterprise environment.
+- Implement Dynamic IP Addressing using DHCP to automate IP address assignment across all network segments for LAN, minimizing manual configuration and IP conflicts.
+- Segment Network using VLANs To separate departments (Accounting, HR, and Marketing) into logical networks, improving security, manageability, and performance.
 - Optimize Routing through OSPF to establish efficient dynamic routing between routers, ensuring fast convergence and optimal path selection.
 - Enhance Network Security and Remote Access using SSH and ACLs to secure administrative access through encrypted remote sessions (SSH) and restrict unauthorized traffic via Access Control Lists (ACL).
+- Set ACLs per VLAN where, Accounting can only access accounting.itserver.ph, HR can only access hr.itserver.ph, and Marketing can only access marketing.itserver.ph and each HTTP per vlan cant access outside.
+- Set up Outside Server for extension using itserver.ph as Extension for Internal DNS servers.
 - Implement Network Services for Enterprise Operations to deploy essential services such as:
-- DNS for domain resolution
-- FTP/HTTP/HTTPS for web and file sharing
-- NTP for synchronized time management
-- Email (SMTP/POP) for communication
-- Integrate VoIP Telephony System To establish IP-based voice communication within departments using Cisco IP Phones and Call Manager (Telephony Server).
+- Enable FTP with roles per VLAN Department where users can share and download files base on their roles in FTP Server.
+- Email (SMTP/POP) for communication.
 - Apply PAT for Internet Connectivity to allow multiple internal devices to access external networks securely using Port Address Translation.
-- Ensure Loop-Free Network through STP to prevent broadcast storms and redundant path loops using Spanning Tree Protocol across switch networks.
-- Simulate Real-World ISP Connection to connect the enterprise network to the Internet through an ISP cloud and modem, emulating a complete WAN setup.
 - Evaluate Network Performance and Reliability to test and verify connectivity, redundancy, routing efficiency, and service availability under simulated conditions.
 ---
 
@@ -36,20 +32,19 @@ The use Configuration use was **Dynamic Host Configuration Protocol (DHCP)**, **
 
 # Configurations/
 - **Internet.txt**
-- **Gateway.txt**
-- **Office.txt**
-- **Standby.txt**
+- **Firewall.txt**
+- **Network.txt**
+- **RouterServer.txt**
 - **Access.txt**
-- **Server.txt**
-- **FrontDesk.txt**
-- **Management.txt**
-- **CEO.txt**
+- **Accounting.txt**
+- **HR.txt**
+- **Marketing.txt**
 
 # IT Networking Source File/
-- **IT Network 5(Office LAN Architecture).pkt**
+- **IT Network 6(IT Security for LAN).pkt**
 
 # Overview
-![Topology](Overview/IT_Network_5.png)
+![Topology](Overview/IT_Network_6.png)
 
 # README.md
 
@@ -60,11 +55,13 @@ The use Configuration use was **Dynamic Host Configuration Protocol (DHCP)**, **
 ---
 
 ## How to Use
-1. Open the `IT Network 5(Office LAN Architecture).pkt` file using **Cisco Packet Tracer**.
-2. Check Network devices if they have DHCP, VLANs, and Telephony.
-3. Analyze the Topology and try to ping each devices.
-4. Test communication via IP Phones across the network.
-5. Try to access web server using it-web.ph in End devices using Browser
+1. Open the `IT Network 6(IT Security for LAN).pkt` file using **Cisco Packet Tracer**.
+2. Check Network devices if they have DHCP, VLANs, and ACLS.
+3. Ping HTTP Service per VLAN.
+4. Try to ping outside IP Address in VLAN Department.
+5. Try to config `show ip nat trans` in Router enable mode.
+6. Open the dedicated DNS of each VLAN in Browser using their domain name or IP Adddress.
+7. Try to open FTP in cmd of end devices in VLAN Department by putting `ftp 172.111.65.3` and put the dedicated username and password.
 ---
 
 ## Author
