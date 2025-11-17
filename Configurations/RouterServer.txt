@@ -83,7 +83,9 @@ ip access-list extended ACCESS_MAIN
  permit ip 192.168.100.0 0.0.0.15 host 172.111.65.6
  deny ip any host 172.111.65.6
  remark --- Shared FTP Server ---
- permit ip 192.168.100.0 0.0.0.31 host 172.111.65.3
+ permit ip 192.168.100.0 0.0.0.7 host 172.111.65.3
+ permit ip 192.168.100.16 0.0.0.7 host 172.111.65.3
+ permit ip 192.168.100.32 0.0.0.15 host 172.111.65.3
  deny ip any host 172.111.65.3
  permit ip any any
 !
@@ -101,4 +103,5 @@ line vty 0 4
 !
 !
 end
+
 
