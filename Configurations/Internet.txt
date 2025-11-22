@@ -4,7 +4,7 @@ no service timestamps log datetime msec
 no service timestamps debug datetime msec
 no service password-encryption
 !
-hostname Router
+hostname Internet
 !
 !
 !
@@ -15,6 +15,8 @@ hostname Router
 !
 no ip cef
 no ipv6 cef
+!
+!
 !
 !
 !
@@ -85,6 +87,10 @@ interface FastEthernet9/0
  duplex auto
  speed auto
  shutdown
+!
+router ospf 1
+ log-adjacency-changes
+ network 1.1.1.0 0.0.0.3 area 1
 !
 ip classless
 !
